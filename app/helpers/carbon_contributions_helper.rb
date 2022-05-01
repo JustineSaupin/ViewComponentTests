@@ -1,0 +1,2 @@
+module CarbonContributionsHelper
+end

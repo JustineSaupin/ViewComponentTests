@@ -1,0 +1,23 @@
+<div class="container">
+
+  <h1>TOTAL contributions carbone : <%= @carbon_contributions_sum %></h1>
+
+  <p>
+    <% @carbon_contributions.each do |carbon|%>
+    <%= carbon.year %> - <%= carbon.value  %> <br>
+    <% end %>
+  </p>
+
+  <%= render(StatComponent.new(
+    title: "Contribution carbon totale",
+    value: "#{@carbon_contributions_sum}",
+    logo: "https://thumbs.dreamstime.com/b/shopping-cart-icon-vector-logo-137282150.jpg")) %>
+
+  <%= render(CardComponent.new(
+    title: "Accompagnement personnalisé stratégie carbone",
+    description: "Vous souhaité que l'un de nos experts accompagne pas à pas votre entreprise dans la compensation de votre empreinte carbone résiduelle ?",
+    picture_url: "https://images.unsplash.com/photo-1518655048521-f130df041f66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")) do%>
+    <%= render(ButtonComponent.new(call_to_action: "Nous contacter"))  %>
+    <% end %>
+</div>
+
