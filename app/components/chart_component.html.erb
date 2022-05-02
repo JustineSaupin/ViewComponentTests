@@ -1,0 +1,3 @@
+<div class="chart-component">
+  <%= column_chart CarbonContribution.group(:year).sum(:value) %>
+</div>
