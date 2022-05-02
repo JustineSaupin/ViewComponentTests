@@ -1,18 +1,20 @@
 <div class="container">
 
-  <h1 class="text-red-600">TOTAL contributions carbone : <%= @carbon_contributions_sum %></h1>
+  <h1 class="text-blue-700 font-semibold text-xl text-center mb-5">ViewComponents Testing</h1>
 
-  <p>
+  <!-- <p>
     <% @carbon_contributions.each do |carbon|%>
     <%= carbon.year %> - <%= carbon.value  %> <br>
     <% end %>
-  </p>
+  </p> -->
 
+  <h1 class="text-blue-900 font-semibold text-xl text-center mb-5">Stat_Component :</h1>
   <%= render(StatComponent.new(
     title: "Contribution carbon totale",
     value: "#{@carbon_contributions_sum}",
     logo: "https://thumbs.dreamstime.com/b/shopping-cart-icon-vector-logo-137282150.jpg")) %>
 
+  <h1 class="text-blue-900 font-semibold text-xl text-center mb-5">Card_Component :</h1>
   <%= render(CardComponent.new(
     title: "Accompagnement personnalisé stratégie carbone",
     description: "Vous souhaité que l'un de nos experts accompagne pas à pas votre entreprise dans la compensation de votre empreinte carbone résiduelle ?",
