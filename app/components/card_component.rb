@@ -12,6 +12,6 @@ class CardComponent < ViewComponent::Base
   end
 
   def card_picture
-    image_tag(picture_url)
+    image_tag(picture_url, class:"h-full")
   end
 end
