@@ -6,9 +6,9 @@
     </p> -->
 
   <h1 class="text-blue-900 font-semibold text-xl text-center mb-5">Chart_Component :</h1>
-  <div class="chart-component w-3/5 mx-auto shadow-xl mb-12 ">
+  <div class="chart-component w-3/5 mx-auto shadow-xl mb-12 p-5">
     <%= column_chart CarbonContribution.group(:year).sum(:value) %>
-    <p class="text-blue-800 text-xs text-right p-5">Contributions carbone réalisées dans l'année (tCO2)</p>
+    <p class="text-blue-800 text-xs text-right pt-3 px-3">Contributions carbone réalisées dans l'année (tCO2)</p>
   </div>
 
 
